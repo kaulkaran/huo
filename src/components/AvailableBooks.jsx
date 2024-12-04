@@ -5,7 +5,7 @@ const AvailableBooks = ({ onSelectBook }) => {
     {
       id: 1,
       title: "Hide and Seek",
-      price: "10",
+      price: "250",
       image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733319380/image/avadhiyhvt3lbvohjkhh.jpg", // Replace with actual image URL
       description: "How does your night go from a game of Hide and Seek ",
       pdfUrl: "https://drive.google.com/uc?export=download&id=10mgWOxQihGKf4_y2eEnpl4fq3EJfDGia", // Link to PDF
