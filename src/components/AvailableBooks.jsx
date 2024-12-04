@@ -7,7 +7,7 @@ const AvailableBooks = ({ onSelectBook }) => {
       title: "Hide and Seek",
       price: "250",
       image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733319380/image/avadhiyhvt3lbvohjkhh.jpg", // Replace with actual image URL
-      description: "How does your night go from a game of Hide and Seek with your best friend, to your parents being murdered the same night? On top of that, you're sent to live with your mother and father's best friend, Mrs. and Mr. Harmon. Although Emily and her brother have no idea who these people are, they're given the luxury life and a dream every kid wants. However, those dreams soon turn into nightmares. A handprint in the dirt, a fired maid who still works in the garden, and a game where you have to kill to keep your soul from being sacrificed to a wicked book. When you enter the house, you follow the rules, you play the game...My name is Emily. I thought it was a normal, abandoned house. I thought she was a normal girl. I thought we'd play a normal game of hide and seek. Turns out I was wrong. Dead wrong...",
+      description: "How does your night go from a game of Hide and Seek with your best friend, to your parents being murdered the same night? On top of that, you're sent to live with your mother and father's best friend, Mrs. and Mr. Harmon. Although Emily and her brother have no idea who these people are, they're given the luxury life and a dream every kid wants. ",
       pdfUrl: "https://drive.google.com/uc?export=download&id=10mgWOxQihGKf4_y2eEnpl4fq3EJfDGia", // Link to PDF
     },
     {
