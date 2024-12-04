@@ -7,7 +7,7 @@ const AvailableBooks = ({ onSelectBook }) => {
       title: "Hide and Seek",
       price: "250",
       image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733319380/image/avadhiyhvt3lbvohjkhh.jpg", // Replace with actual image URL
-      description: "How does your night go from a game of Hide and Seek with your best friend, to your parents being murdered the same night? On top of that, you're sent to live with your mother and father's best friend, Mrs. and Mr. Harmon. Although Emily and her brother have no idea who these people are, they're given the luxury life and a dream every kid wants. ",
+      description: "How does your night go from a game of Hide and Seek ",
       pdfUrl: "https://drive.google.com/uc?export=download&id=10mgWOxQihGKf4_y2eEnpl4fq3EJfDGia", // Link to PDF
     },
     {
@@ -15,7 +15,7 @@ const AvailableBooks = ({ onSelectBook }) => {
       title: "Hide and Seek 2",
       price: "300",
       image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733320196/image/xldbd7go3ckokpejymla.jpg", // Replace with actual image URL
-      description: "My name is Emily. Two years ago I lost everything. I thought I could start a new life. I thought Abby was gone. I thought I'd never see Jasper again. I thought I would never have to play another game of hide and seek in my life. Turns out I was wrong. Dead wrong. AGAIN...",
+      description: "My name is Emily. Two years ago I lost everything. I thought I could start a new life. ",
       pdfUrl: "https://drive.google.com/file/d/16-cbF7B1Q4ZLv7NyZTYSxN-mAJ-5ULRt/view?usp=drive_link", // Link to PDF
     },
     {
@@ -23,7 +23,7 @@ const AvailableBooks = ({ onSelectBook }) => {
       title: "Hide and Seek 3",
       price: "450",
       image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733322615/image/vriv4cq2ovtuohgwueht.png", // Replace with actual image URL
-      description: "Tori and her friends use an ouija board at the ruins of Mr. Harmon's old mansion. After losing one of her friends to a supposedly ghost, she seeks for answers. In order to stop the haunting, she must contact someone who knows the other side too well.Emily.",
+      description: "Tori and her friends use an ouija board at the ruins of Mr. Harmon's old mansion. ",
       pdfUrl: "https://drive.google.com/uc?export=download&id=16-cbF7B1Q4ZLv7NyZTYSxN-mAJ-5ULRt", // Link to PDF
     },
   ];
