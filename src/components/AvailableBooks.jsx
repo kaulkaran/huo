@@ -1,36 +1,32 @@
 import React from "react";
 
-
 const AvailableBooks = ({ onSelectBook }) => {
-
-
   const availableBooks = [
     {
       id: 1,
-      title: "Available Book 1",
-      price: "500",
-      image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733295721/image/pwxdtqbz4jetgnvghtby.png", // Replace with actual image URL
+      title: "Hide and Seek",
+      price: "250",
+      image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733319380/image/avadhiyhvt3lbvohjkhh.jpg", // Replace with actual image URL
       description: "This is a description of Book 1",
-      pdfUrl: "https://drive.google.com/uc?export=download&id=1SfO2WgHUxeGEkIUuYuJBcSdt3foZo1b8", // Link to PDF
+      pdfUrl: "https://drive.google.com/uc?export=download&id=10mgWOxQihGKf4_y2eEnpl4fq3EJfDGia", // Link to PDF
     },
     {
       id: 2,
-      title: "Available Book 2",
+      title: "Hide and Seek 2",
       price: "300",
-      image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733295721/image/pwxdtqbz4jetgnvghtby.png", // Replace with actual image URL
+      image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733320196/image/xldbd7go3ckokpejymla.jpg", // Replace with actual image URL
       description: "This is a description of Book 1",
-      pdfUrl: "https://drive.google.com/uc?export=download&id=1SfO2WgHUxeGEkIUuYuJBcSdt3foZo1b8", // Link to PDF
+      pdfUrl: "https://drive.google.com/file/d/16-cbF7B1Q4ZLv7NyZTYSxN-mAJ-5ULRt/view?usp=drive_link", // Link to PDF
     },
     {
       id: 3,
       title: "Available Book 3",
       price: "450",
-      image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733295721/image/pwxdtqbz4jetgnvghtby.png", // Replace with actual image URL
+      image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733322615/image/vriv4cq2ovtuohgwueht.png", // Replace with actual image URL
       description: "This is a description of Book 1",
-      pdfUrl: "https://drive.google.com/uc?export=download&id=1SfO2WgHUxeGEkIUuYuJBcSdt3foZo1b8", // Link to PDF
+      pdfUrl: "https://drive.google.com/uc?export=download&id=16-cbF7B1Q4ZLv7NyZTYSxN-mAJ-5ULRt", // Link to PDF
     },
   ];
-  
 
   // Inline CSS styles
   const sectionStyle = {
@@ -43,8 +39,9 @@ const AvailableBooks = ({ onSelectBook }) => {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
-    gap: "20px", // Reduced gap for smaller containers
+    gap: "20px",
     marginTop: "20px",
+    flexDirection: "row", // Default to row
   };
 
   const cardStyle = {
@@ -77,109 +74,72 @@ const AvailableBooks = ({ onSelectBook }) => {
 
   const imageStyle = {
     width: "100%",
-  height: "225px", // Reduced image height
-  objectFit: "cover",
-  borderRadius: "8px",
-  marginBottom: "8px",
+    height: "225px", // Reduced image height
+    objectFit: "cover",
+    borderRadius: "8px",
+    marginBottom: "8px",
   };
 
-
+  // Responsive CSS for mobile view
   const responsiveStyles = `
-    .book-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      width: 150px;
-      padding: 10px;
-      background-color: #fff;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .card img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 8px;
-    }
-
-    .card h3 {
-      font-size: 14px;
-      color: #333;
-      margin: 10px 0;
-    }
-
-    .card p {
-      font-size: 12px;
-      color: #555;
-    }
-
-    /* Responsive Media Query */
     @media (max-width: 768px) {
+      .container {
+        gap: 15px; 
+      }
+
       .card {
-        width: 120px; /* Smaller width for smaller screens */
-        padding: 8px; /* Reduced padding */
+        width: 150px; /* Smaller card width for mobile */
+        padding: 10px; /* Reduced padding */
       }
+
       .card img {
-        height: 100px; /* Smaller image height */
+        height: 120px; /* Smaller image height */
       }
+
       .card h3 {
-        font-size: 12px; /* Smaller font size */
+        font-size: 14px;
       }
+
       .card p {
-        font-size: 10px; /* Smaller font size */
+        font-size: 12px;
       }
     }
   `;
+
   return (
     <>
-          <style>{responsiveStyles}</style>
-    <section id="available" style={sectionStyle}>
-      <h2 style={{ marginBottom: "20px", color: "#333" }}>Available Books</h2>
-      <div style={containerStyle}>
-        {availableBooks.map((book) => (
-          <div
-            key={book.id}
-            style={cardStyle}
-            onClick={() => onSelectBook(book)}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = cardHoverStyle.transform;
-              e.currentTarget.style.boxShadow = cardHoverStyle.boxShadow;
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "none";
-              e.currentTarget.style.boxShadow =
-                "0 4px 8px rgba(0, 0, 0, 0.1)";
-            }}
-          >
-            <img
-              src={book.image}
-              alt={book.title}
-              style={imageStyle}
-            />
-            <h3 style={titleStyle}>{book.title}</h3>
-            <p style={priceStyle}>
-              <strong>Price:</strong> ₹{book.price}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
+      <style>{responsiveStyles}</style>
+      <section id="available" style={sectionStyle}>
+        <h2 style={{ marginBottom: "20px", color: "#333" }}>Available Books</h2>
+        <div style={containerStyle}>
+          {availableBooks.map((book) => (
+            <div
+              key={book.id}
+              style={cardStyle}
+              onClick={() => onSelectBook(book)}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = cardHoverStyle.transform;
+                e.currentTarget.style.boxShadow = cardHoverStyle.boxShadow;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "none";
+                e.currentTarget.style.boxShadow =
+                  "0 4px 8px rgba(0, 0, 0, 0.1)";
+              }}
+            >
+              <img
+                src={book.image}
+                alt={book.title}
+                style={imageStyle}
+              />
+              <h3 style={titleStyle}>{book.title}</h3>
+              <p style={priceStyle}>
+                <strong>Price:</strong> ₹{book.price}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   );
 };

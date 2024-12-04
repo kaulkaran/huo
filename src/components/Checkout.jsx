@@ -59,7 +59,7 @@ const Checkout = () => {
       setLoading(true); // Show loading state while payment is being processed
 
       const options = {
-        key: "rzp_test_pVZoyNIJWMSmxu", // Your Razorpay API key
+        key: "rzp_live_zFbYO5qRpTCbvL", // Your Razorpay API key
         amount: book.price * 100, // Price of the selected book in paise (₹500 = 50000 paise)
         currency: "INR",
         name: "My Bookstore",
