@@ -2,6 +2,33 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const Checkout = () => {
+  const containerStyle = {
+    padding: "20px",
+    maxWidth: "600px",
+    margin: "auto",
+    textAlign: "center",
+  };
+
+  const buttonStyle = {
+    padding: "10px 20px",
+    margin: "10px 5px",
+    fontSize: "16px",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+  };
+
+  const payButtonStyle = {
+    ...buttonStyle,
+    backgroundColor: "#4CAF50",
+    color: "white",
+  };
+
+  const cancelButtonStyle = {
+    ...buttonStyle,
+    backgroundColor: "#FF5733",
+    color: "white",
+  };
   const location = useLocation();
   const { book } = location.state || {}; // Retrieve the book info passed in state
 

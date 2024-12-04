@@ -43,15 +43,15 @@ const AvailableBooks = ({ onSelectBook }) => {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
-    gap: "20px",
+    gap: "20px", // Reduced gap for smaller containers
     marginTop: "20px",
   };
 
   const cardStyle = {
     border: "1px solid #ddd",
     borderRadius: "8px",
-    width: "200px",
-    padding: "15px",
+    width: "200px", // Smaller card width
+    padding: "15px", // Reduced padding
     backgroundColor: "#fff",
     textAlign: "center",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -77,13 +77,78 @@ const AvailableBooks = ({ onSelectBook }) => {
 
   const imageStyle = {
     width: "100%",
-    height: "150px",
-    objectFit: "cover",
-    borderRadius: "8px",
-    marginBottom: "10px",
+  height: "225px", // Reduced image height
+  objectFit: "cover",
+  borderRadius: "8px",
+  marginBottom: "8px",
   };
 
+
+  const responsiveStyles = `
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 150px;
+      padding: 10px;
+      background-color: #fff;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      font-size: 14px;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Responsive Media Query */
+    @media (max-width: 768px) {
+      .card {
+        width: 120px; /* Smaller width for smaller screens */
+        padding: 8px; /* Reduced padding */
+      }
+      .card img {
+        height: 100px; /* Smaller image height */
+      }
+      .card h3 {
+        font-size: 12px; /* Smaller font size */
+      }
+      .card p {
+        font-size: 10px; /* Smaller font size */
+      }
+    }
+  `;
   return (
+    <>
+          <style>{responsiveStyles}</style>
     <section id="available" style={sectionStyle}>
       <h2 style={{ marginBottom: "20px", color: "#333" }}>Available Books</h2>
       <div style={containerStyle}>
@@ -115,6 +180,7 @@ const AvailableBooks = ({ onSelectBook }) => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 
