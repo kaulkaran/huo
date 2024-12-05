@@ -13,10 +13,10 @@ const AvailableBooks = ({ onSelectBook }) => {
     {
       id: 2,
       title: "Hide and Seek 2",
-      price: "300",
+      price: "350",
       image: "https://res.cloudinary.com/dw5ow19cc/image/upload/v1733320196/image/xldbd7go3ckokpejymla.jpg", // Replace with actual image URL
       description: "My name is Emily. Two years ago I lost everything. I thought I could start a new life. ",
-      pdfUrl: "https://drive.google.com/file/d/16-cbF7B1Q4ZLv7NyZTYSxN-mAJ-5ULRt/view?usp=drive_link", // Link to PDF
+      pdfUrl: "https://drive.google.com/uc?export=download&id=1-6tQjXtw80FbnNoQ1fDQViWvByhGPuRk", // Link to PDF
     },
     {
       id: 3,
